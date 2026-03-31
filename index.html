@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resources - Class 9-12 </title>
+    <style>
+        /* FOREST THEME 🌲 */
+body.forest {
+  --bg: linear-gradient(135deg, #134e5e, #71b280);
+  --card-bg: #e6ffe6;
+  --text: #033;
+}
+
+/* OCEAN THEME 🌊 */
+body.ocean {
+  --bg: linear-gradient(135deg, #2193b0, #6dd5ed);
+  --card-bg: #e0f7ff;
+  --text: #003344;
+}
+
+/* SUNSET THEME 🌇 */
+body.sunset {
+  --bg: linear-gradient(135deg, #ff7e5f, #feb47b);
+  --card-bg: #fff0e6;
+  --text: #4a1c00;
+}
+        /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* THEMES */
+body {
+  --bg: linear-gradient(135deg, #667eea, #764ba2);
+  --card-bg: #fff;
+  --text: #333;
+}
+
+body.dark {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #fff;
+}
+
+body.neon {
+  --bg: #000;
+  --card-bg: #111;
+  --text: #0ff;
+}
+
+/* BODY */
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* HEADING */
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* CARD HOVER 3D */
+.card:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* CARD GLOW EFFECT */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  top: -100%;
+  left: 0;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: 100%;
+}
+
+/* CARD TEXT */
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #667eea;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: #764ba2;
+}
+
+/* BUTTON GLOW */
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255,255,255,0.2);
+  top: -100%;
+  left: -100%;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  top: 100%;
+  left: 100%;
+}
+
+/* MOTIVATION SECTION */
+.motivation {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.motivation p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.motivation button {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.motivation button:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+/* FLOATING BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.1);
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+        /* Motivation Section */
+.motivation {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.motivation h2 {
+  margin-bottom: 15px;
+}
+
+.motivation p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.motivation button {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.motivation button:hover {
+  background: #667eea;
+  color: #fff;
+}
+        /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Theme */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Card Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card Design */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Glow Effect */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  top: -100%;
+  left: 0;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: 100%;
+}
+
+/* Card Title */
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Card Text */
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #667eea;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #764ba2;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            animation: slideDown 0.8s ease-out;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ===== GAMIFICATION STYLES ===== */
+        .gamification-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: popIn 0.6s ease-out;
+        }
+
+        .stat-card h3 {
+            font-size: 2em;
+            margin: 10px 0;
+            animation: countUp 1s ease-out;
+        }
+
+        .stat-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+            animation: bounce 0.6s ease-out;
+            box-shadow: 0 4px 10px rgba(245, 87, 108, 0.4);
+        }
+
+        .badge.earned {
+            animation: badgePop 0.8s ease-out;
+        }
+
+        .level-bar {
+            background: #ecf0f1;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 15px 0;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .level-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #2ecc71, #f1c40f, #e74c3c);
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            animation: progressFill 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .level-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* ===== QUIZ & GAMIFICATION ===== */
+        .quiz-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .quiz-question {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .option-btn {
+            padding: 15px;
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-5px);
+            background: #3498db;
+            color: white;
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .option-btn.correct {
+            background: #2ecc71;
+            color: white;
+            border-color: #27ae60;
+            animation: correctAnswer 0.6s ease-out;
+        }
+
+        .option-btn.incorrect {
+            background: #e74c3c;
+            color: white;
+            border-color: #c0392b;
+            animation: shake 0.4s ease-out;
+        }
+
+        .quiz-result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            animation: popIn 0.6s ease-out;
+        }
+
+        .quiz-result.correct {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .quiz-result.incorrect {
+            background: #e74c3c;
+            color: white;
+        }
+
+        /* ===== ACHIEVEMENT SYSTEM ===== */
+        .achievement-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .achievement {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: achievementUnlock 0.8s ease-out;
+        }
+
+        .achievement:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: bounce 0.8s ease-out infinite;
+        }
+
+        .achievement-title {
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .achievement.locked {
+            opacity: 0.5;
+            grayscale: 100%;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes badgePop {
+            0% {
+                opacity: 0;
+                transform: scale(0) rotate(-180deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        @keyframes progressFill {
+            from { width: 0; }
+            to { width: 45%; }
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        @keyframes correctAnswer {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes achievementUnlock {
+            0% {
+                opacity: 0;
+                transform: rotateY(90deg) scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0) scale(1);
+            }
+        }
+
+        /* ===== LEADERBOARD ===== */
+        .leaderboard {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .leaderboard-item.top-3 {
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.3), rgba(230, 126, 34, 0.3));
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .rank {
+            font-weight: bold;
+            font-size: 1.2em;
+            min-width: 40px;
+        }
+
+        .rank.medal-1::before { content: '🥇'; }
+        .rank.medal-2::before { content: '🥈'; }
+        .rank.medal-3::before { content: '🥉'; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+            border-radius: 10px;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        /* Floating buttons */
+        .floating-btn {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 28px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-btn.ai {
+            bottom: 80px;
+            right: 20px;
+            background: #2ecc71;
+        }
+
+        .floating-btn.doubt {
+            bottom: 20px;
+            right: 20px;
+            background: #e74c3c;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center; margin:20px;">
+  <select onchange="changeTheme(this.value)">
+    <option value="">Default</option>
+    <option value="dark">Dark</option>
+    <option value="neon">Neon</option>
+    <option value="forest">Forest 🌲</option>
+    <option value="ocean">Ocean 🌊</option>
+    <option value="sunset">Sunset 🌇</option>
+  </select>
+</div>
+    <header>
+        <h1>🎓 Study Resources - Class 9-12</h1>
+        <p>Gamified Learning Experience</p>
+    </header>
+
+    <div class="container">
+        <!-- Gamification Dashboard -->
+        <div class="gamification-dashboard">
+            <div class="stat-card">
+                <p>📊 Your Level</p>
+                <h3 id="user-level">5</h3>
+                <p>Keep grinding!</p>
+            </div>
+            <div class="stat-card">
+                <p>⭐ Total Points</p>
+                <h3 id="total-points">2,450</h3>
+                <p>Amazing progress!</p>
+            </div>
+            <div class="stat-card">
+                <p>🏆 Streak</p>
+                <h3 id="streak-count">12</h3>
+                <p>Days consecutive</p>
+            </div>
+            <div class="stat-card">
+                <p>📚 Quizzes Completed</p>
+                <h3 id="quiz-completed">24</h3>
+                <p>Well done!</p>
+            </div>
+        </div>
+
+        <!-- Level Progress Bar -->
+        <div class="resource-card">
+            <h3>📈 Progress to Next Level</h3>
+            <div class="level-bar">
+                <div class="level-progress">
+                    <span>45%</span>
+                </div>
+            </div>
+            <p>You need 550 more points to reach Level 6!</p>
+        </div>
+
+        <!-- Badges Section -->
+        <div class="resource-card">
+            <h3>🎖️ Your Badges</h3>
+            <div>
+                <div class="badge earned">⭐ Quiz Master</div>
+                <div class="badge earned">📚 Knowledge Seeker</div>
+                <div class="badge earned">🔥 7-Day Streak</div>
+                <div class="badge">💎 Perfect Score (Locked)</div>
+                <div class="badge">🚀 Speed Demon (Locked)</div>
+            </div>
+        </div>
+
+        <!-- Achievement System -->
+        <div class="achievement-section">
+            <h3>🏅 Achievements</h3>
+            <div style="text-align: center;">
+                <div class="achievement">
+                    <div class="achievement-icon">🎯</div>
+                    <div class="achievement-title">First Quiz</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-title">100 Points</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-icon">🔥</div>
+                    <div class="achievement-title">7-Day Streak</div>
+                </div>
+                <div class="achievement locked">
+                    <div class="achievement-icon">💎</div>
+                    <div class="achievement-title">Master (Locked)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Quiz -->
+        <div class="resource-card">
+            <h3>🎮 Quick Quiz - Earn Points!</h3>
+            <div class="quiz-container">
+                <div class="quiz-question">What is the chemical formula for salt?</div>
+                <div class="quiz-options">
+                    <button class="option-btn" onclick="checkAnswer(this, true)">NaCl</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false)">KCl</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false)">CaCl₂</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false)">MgCl₂</button>
+                </div>
+                <div id="result" style="display: none;" class="quiz-result"></div>
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h3>🏆 Top Learners Leaderboard</h3>
+            <div class="leaderboard-item top-3">
+                <span class="rank medal-1">1</span>
+                <span>Arjun Kumar</span>
+                <span>5,890 pts</span>
+            </div>
+            <div class="leaderboard-item top-3">
+                <span class="rank medal-2">2</span>
+                <span>Priya Singh</span>
+                <span>5,450 pts</span>
+            </div>
+            <div class="leaderboard-item top-3">
+                <span class="rank medal-3">3</span>
+                <span>Rahul Patel</span>
+                <span>5,230 pts</span>
+            </div>
+            <div class="leaderboard-item">
+                <span class="rank">4</span>
+                <span>You</span>
+                <span>2,450 pts</span>
+            </div>
+            <div class="leaderboard-item">
+                <span class="rank">5</span>
+                <span>Anjali Roy</span>
+                <span>2,100 pts</span>
+            </div>
+        </div>
+
+        <!-- Study Resources -->
+        <div class="resource-card">
+            <h3>📚 Study Materials</h3>
+            <div class="chapter">
+                <h4>Class 9 - Mathematics Chapter 1: Number Systems</h4>
+                <p>Topics covered: Natural numbers, Integers, Rational & Irrational numbers, Real numbers</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn ai" onclick="toggleAIChat()" title="AI Assistant">🤖</button>
+    <button class="floating-btn doubt" onclick="toggleDoubtChat()" title="Post Doubt">❓</button>
+
+    <footer>
+        <p>&copy; 2024 Study Resources with Gamification. Keep Learning & Leveling Up! 🚀</p>
+    </footer>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const resultDiv = document.getElementById('result');
+            const allButtons = document.querySelectorAll('.option-btn');
+            
+            allButtons.forEach(btn => btn.disabled = true);
+            
+            if (isCorrect) {
+                button.classList.add('correct');
+                resultDiv.classList.remove('incorrect');
+                resultDiv.classList.add('correct');
+                resultDiv.textContent = '✅ Correct! +50 Points!';
+                document.getElementById('total-points').textContent = '2,500';
+            } else {
+                button.classList.add('incorrect');
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
+                resultDiv.textContent = '❌ Incorrect. Try next question!';
+            }
+            
+            resultDiv.style.display = 'block';
+        }
+
+        function toggleAIChat() {
+            alert('🤖 AI Assistant feature coming soon!');
+        }
+
+        function toggleDoubtChat() {
+            alert('❓ Doubt posting feature coming soon!');
+        }
+    </script>
+</body>
+</html>
+<!-- More Interactive Quizzes -->
+<div class="resource-card">
+    <h3>🎮 Quick Quiz - Biology</h3>
+    <div class="quiz-container">
+    <div class="quiz-question">What is the basic unit of life?</div>
+    <div class="quiz-options">
+        <button class="option-btn" onclick="checkAnswer(this, true)">Cell</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Atom</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Molecule</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Tissue</button>
+    </div>
+    <div id="result2" style="display: none;" class="quiz-result"></div>
+    </div>
+</div>
+
+<div class="resource-card">
+    <h3>🎮 Quick Quiz - History</h3>
+    <div class="quiz-container">
+    <div class="quiz-question">In which year did India gain independence?</div>
+    <div class="quiz-options">
+        <button class="option-btn" onclick="checkAnswer(this, true)">1947</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">1945</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">1950</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">1942</button>
+    </div>
+    <div id="result3" style="display: none;" class="quiz-result"></div>
+    </div>
+</div>
+
+<div class="resource-card">
+    <h3>🎮 Quick Quiz - Physics</h3>
+    <div class="quiz-container">
+    <div class="quiz-question">What is the SI unit of force?</div>
+    <div class="quiz-options">
+        <button class="option-btn" onclick="checkAnswer(this, true)">Newton</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Joule</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Pascal</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Watt</button>
+    </div>
+    <div id="result4" style="display: none;" class="quiz-result"></div>
+    </div>
+</div>
+
+<div class="resource-card">
+    <h3>🎮 Quick Quiz - English</h3>
+    <div class="quiz-container">
+    <div class="quiz-question">Which literary device is used in "The world is a stage"?</div>
+    <div class="quiz-options">
+        <button class="option-btn" onclick="checkAnswer(this, true)">Metaphor</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Simile</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Hyperbole</button>
+        <button class="option-btn" onclick="checkAnswer(this, false)">Irony</button>
+    </div>
+    <div id="result5" style="display: none;" class="quiz-result"></div>
+    </div>
+</div>
+<!-- Math Class 9 - All Chapters with Videos -->
+<div class="resource-card">
+    <h3>📐 Mathematics Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 1: Number Systems</h4>
+    <p><strong>Topics:</strong> Natural numbers, Whole numbers, Integers, Rational numbers, Irrational numbers, Real numbers, Number line representation</p>
+    <p><strong>Key Concepts:</strong> Closure property, Commutative property, Associative property, Distributive property</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8nUJPGOyGFw" title="Number Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 2: Polynomials</h4>
+    <p><strong>Topics:</strong> Monomials, Binomials, Trinomials, Degree of polynomial, Zeros of polynomial, Remainder theorem, Factor theorem</p>
+    <p><strong>Key Concepts:</strong> Polynomial division, Factorization techniques, Algebraic identities</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ennxmg3yFW0" title="Polynomials" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 3: Coordinate Geometry</h4>
+    <p><strong>Topics:</strong> Cartesian plane, Plotting points, Distance formula, Section formula, Area of triangle</p>
+    <p><strong>Key Concepts:</strong> X and Y axes, Quadrants, Distance between two points, Midpoint formula</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Bt-Bw-S3Z2c" title="Coordinate Geometry" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 4: Linear Equations in Two Variables</h4>
+    <p><strong>Topics:</strong> Linear equation, Graphical representation, Solution methods (substitution, elimination), Consistency of equations</p>
+    <p><strong>Key Concepts:</strong> Slope, Intercepts, Parallel and perpendicular lines</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jx_3C6r3i8w" title="Linear Equations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 5: Introduction to Euclid's Geometry</h4>
+    <p><strong>Topics:</strong> Euclid's postulates, Theorem and proof, Equivalent versions of Euclid's fifth postulate</p>
+    <p><strong>Key Concepts:</strong> Definitions, Axioms, Postulates, Logical deduction</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/rQsRSDUOy_8" title="Euclid's Geometry" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 6: Lines and Angles</h4>
+    <p><strong>Topics:</strong> Angle formation, Adjacent angles, Linear pair, Vertically opposite angles, Parallel lines, Transversal</p>
+    <p><strong>Key Concepts:</strong> Angle relationships, Properties of parallel lines, Corresponding angles, Alternate angles</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/F-jl_T2Bvz0" title="Lines and Angles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 7: Triangles</h4>
+    <p><strong>Topics:</strong> Congruence of triangles, Criteria for congruence (SAS, ASA, SSS, RHS), Properties of triangles</p>
+    <p><strong>Key Concepts:</strong> Angle sum property, Isosceles triangles, Inequalities in triangles</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Qs7gXHfWnGA" title="Triangles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 8: Quadrilaterals</h4>
+    <p><strong>Topics:</strong> Quadrilateral properties, Parallelogram, Rectangle, Rhombus, Square, Trapezium, Kite</p>
+    <p><strong>Key Concepts:</strong> Angle sum property, Properties of special quadrilaterals, Mid-point theorem</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cVEFfXHX8HY" title="Quadrilaterals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 9: Areas of Parallelograms and Triangles</h4>
+    <p><strong>Topics:</strong> Area formulas, Figures on the same base, Between the same parallels, Theorem proofs</p>
+    <p><strong>Key Concepts:</strong> Base and height, Area relationships, Diagonal properties</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/IyST0LWJ-zI" title="Areas of Parallelograms and Triangles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 10: Circles</h4>
+    <p><strong>Topics:</strong> Circle properties, Chord and diameter, Tangent to circle, Angle subtended by chord, Cyclic quadrilateral</p>
+    <p><strong>Key Concepts:</strong> Radius, Circumference, Arc, Sector, Tangent properties</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/R1PmAF6kVxs" title="Circles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 11: Constructions</h4>
+    <p><strong>Topics:</strong> Construction of triangles, Angle bisector, Perpendicular bisector, Inscribed and circumscribed circles</p>
+    <p><strong>Key Concepts:</strong> Using compass and straightedge, Geometric construction techniques</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/GlFz8v7KTQE" title="Constructions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 12: Heron's Formula</h4>
+    <p><strong>Topics:</strong> Area using Heron's formula, Application to quadrilaterals, Triangles with three sides given</p>
+    <p><strong>Key Concepts:</strong> Semi-perimeter, Derivation, Numerical problems</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/3L5HZv5Ykn4" title="Heron's Formula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 13: Surface Areas and Volumes</h4>
+    <p><strong>Topics:</strong> Surface area of cube, cuboid, cylinder, cone, sphere; Volume formulas; Frustum of cone</p>
+    <p><strong>Key Concepts:</strong> Lateral surface area, Total surface area, Volume relationships</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/t2W5uPSBl7w" title="Surface Areas and Volumes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 14: Statistics</h4>
+    <p><strong>Topics:</strong> Collection of data, Mean, Median, Mode, Frequency distribution, Histogram, Bar graph, Pie chart</p>
+    <p><strong>Key Concepts:</strong> Grouped and ungrouped data, Cumulative frequency, Class interval</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/E3J6SSkv0CM" title="Statistics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+    <h4>Chapter 15: Probability</h4>
+    <p><strong>Topics:</strong> Experimental probability, Theoretical probability, Event, Sample space, Complementary events</p>
+    <p><strong>Key Concepts:</strong> Outcome, Favorable outcomes, Probability formula, Practical applications</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/GfWB0Qs0e1M" title="Probability" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+</div>
+<!-- Subject Selection Panel -->
+<div class="resource-card">
+    <h3>📚 Select Your Subject</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+        <button class="subject-btn" onclick="showSubject('math')">📐 Mathematics</button>
+        <button class="subject-btn" onclick="showSubject('science')">🔬 Science</button>
+        <button class="subject-btn" onclick="showSubject('english')">📖 English</button>
+        <button class="subject-btn" onclick="showSubject('history')">🏛️ History</button>
+        <button class="subject-btn" onclick="showSubject('geography')">🌍 Geography</button>
+        <button class="subject-btn" onclick="showSubject('civics')">⚖️ Civics</button>
+    </div>
+</div>
+
+<!-- Class Selection -->
+<div id="classSelection" style="display: none;" class="resource-card">
+    <h3 id="subjectTitle"></h3>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+        <button class="class-btn" onclick="showContent('9')">Class 9</button>
+        <button class="class-btn" onclick="showContent('10')">Class 10</button>
+        <button class="class-btn" onclick="showContent('11')">Class 11</button>
+        <button class="class-btn" onclick="showContent('12')">Class 12</button>
+    </div>
+</div>
+
+<!-- Content Display Area -->
+<div id="contentArea" style="display: none;"></div>
+
+<style>
+.subject-btn, .class-btn {
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.subject-btn:hover, .class-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+</style>
+
+<script>
+const subjectData = {
+    math: {
+        title: '📐 Mathematics',
+        classes: {
+            9: [
+                {chapter: 'Number Systems', topics: 'Natural, Whole, Integers, Rational, Irrational, Real numbers', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Polynomials', topics: 'Monomials, Binomials, Remainder & Factor theorem', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Coordinate Geometry', topics: 'Cartesian plane, Distance formula, Section formula', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+            ],
+            10: [
+                {chapter: 'Real Numbers', topics: 'Euclid division, HCF, LCM, Fundamental theorem of arithmetic', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Quadratic Equations', topics: 'Solutions, Discriminant, Nature of roots', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Arithmetic Progressions', topics: 'AP, nth term, Sum of n terms', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+            ],
+            11: [
+                {chapter: 'Sets & Functions', topics: 'Set theory, Types of functions, Domain, Range', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Trigonometric Functions', topics: 'Angles, Trigonometric ratios, Identities', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Calculus Basics', topics: 'Limits, Continuity, Derivatives', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+            ],
+            12: [
+                {chapter: 'Relations & Functions', topics: 'Advanced functions, Inverse functions, Composition', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Integration', topics: 'Indefinite integrals, Definite integrals, Applications', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+                {chapter: 'Probability', topics: 'Conditional probability, Bayes theorem, Distributions', resources: ['Video Tutorial', 'PDF Notes', 'Practice Problems']},
+            ]
+        }
+    },
+    science: {
+        title: '🔬 Science',
+        classes: {
+            9: [
+                {chapter: 'Matter in Our Surroundings', topics: 'States of matter, Properties, Changes', resources: ['Video Tutorial', 'PDF Notes', 'Experiments']},
+                {chapter: 'Atomic Structure', topics: 'Atoms, Electrons, Nucleus, Isotopes', resources: ['Video Tutorial', 'PDF Notes', '3D Models']},
+                {chapter: 'Cell Structure', topics: 'Plant & Animal cells, Organelles, Cell division', resources: ['Video Tutorial', 'PDF Notes', 'Diagrams']},
+            ],
+            10: [
+                {chapter: 'Chemical Reactions', topics: 'Types of reactions, Balancing equations, Redox', resources: ['Video Tutorial', 'PDF Notes', 'Lab Videos']},
+                {chapter: 'Heredity', topics: 'Genes, DNA, Inheritance patterns, Evolution', resources: ['Video Tutorial', 'PDF Notes', 'Animations']},
+                {chapter: 'Light & Optics', topics: 'Reflection, Refraction, Lenses, Eyes', resources: ['Video Tutorial', 'PDF Notes', 'Simulations']},
+            ],
+            11: [
+                {chapter: 'Mechanics', topics: 'Motion, Force, Newton\'s laws, Energy', resources: ['Video Tutorial', 'PDF Notes', 'Lab Experiments']},
+                {chapter: 'Waves & Sound', topics: 'Wave properties, Doppler effect, Acoustics', resources: ['Video Tutorial', 'PDF Notes', 'Simulations']},
+                {chapter: 'Thermodynamics', topics: 'Heat, Temperature, Laws of thermodynamics', resources: ['Video Tutorial', 'PDF Notes', 'Experiments']},
+            ],
+            12: [
+                {chapter: 'Electromagnetism', topics: 'Electric field, Current, Magnetism, EMI', resources: ['Video Tutorial', 'PDF Notes', 'Lab Setups']},
+                {chapter: 'Modern Physics', topics: 'Photoelectric effect, Atomic models, Nuclear physics', resources: ['Video Tutorial', 'PDF Notes', 'Research Papers']},
+                {chapter: 'Organic Chemistry', topics: 'Hydrocarbons, Functional groups, Reactions', resources: ['Video Tutorial', 'PDF Notes', 'Structures']},
+            ]
+        }
+    },
+    english: {
+        title: '📖 English',
+        classes: {
+            9: [
+                {chapter: 'Grammar Basics', topics: 'Parts of speech, Tenses, Sentence structure', resources: ['Video Tutorial', 'PDF Notes', 'Exercises']},
+                {chapter: 'Poetry & Literature', topics: 'Poems, Literary devices, Interpretation', resources: ['Video Tutorial', 'PDF Notes', 'Analysis']},
+                {chapter: 'Reading Comprehension', topics: 'Passage analysis, Question answering, Vocabulary', resources: ['Video Tutorial', 'PDF Notes', 'Practice Sets']},
+            ],
+            10: [
+                {chapter: 'Drama & Plays', topics: 'Shakespeare, Characters, Themes, Scenes', resources: ['Video Tutorial', 'PDF Notes', 'Character Analysis']},
+                {chapter: 'Prose Writing', topics: 'Story writing, Essays, Letters', resources: ['Video Tutorial', 'PDF Notes', 'Sample Answers']},
+                {chapter: 'Vocabulary', topics: 'Word meanings, Synonyms, Antonyms, Usage', resources: ['Video Tutorial', 'PDF Notes', 'Word Lists']},
+            ],
+            11: [
+                {chapter: 'Advanced Grammar', topics: 'Complex structures, Clauses, Modifiers', resources: ['Video Tutorial', 'PDF Notes', 'Exercises']},
+                {chapter: 'Literary Analysis', topics: 'Novels, Themes, Symbolism, Critique', resources: ['Video Tutorial', 'PDF Notes', 'Essays']},
+                {chapter: 'Communication Skills', topics: 'Presentation, Discussion, Debate', resources: ['Video Tutorial', 'PDF Notes', 'Practice']},
+            ],
+            12: [
+                {chapter: 'Advanced Literature', topics: 'Modern works, Critical analysis, Interpretation', resources: ['Video Tutorial', 'PDF Notes', 'Research']},
+                {chapter: 'Professional Writing', topics: 'Reports, Proposals, Formal communication', resources: ['Video Tutorial', 'PDF Notes', 'Templates']},
+                {chapter: 'Language Skills', topics: 'Idioms, Expressions, Nuances, Style', resources: ['Video Tutorial', 'PDF Notes', 'Collections']},
+            ]
+        }
+    },
+    history: {
+        title: '🏛️ History',
+        classes: {
+            9: [
+                {chapter: 'Medieval India', topics: 'Delhi Sultanate, Mughal Empire, Culture', resources: ['Video Tutorial', 'PDF Notes', 'Timeline']},
+                {chapter: 'World History', topics: 'Renaissance, Industrial Revolution, World Wars', resources: ['Video Tutorial', 'PDF Notes', 'Maps']},
+                {chapter: 'Freedom Struggle', topics: 'British Raj, Independence movement, Leaders', resources: ['Video Tutorial', 'PDF Notes', 'Documents']},
+            ],
+            10: [
+                {chapter: 'Ancient Civilizations', topics: 'Harappa, Egyptian, Mesopotamian cultures', resources: ['Video Tutorial', 'PDF Notes', 'Artifacts']},
+                {chapter: 'Modern India', topics: 'Constitution, Republic, Democratic system', resources: ['Video Tutorial', 'PDF Notes', 'Government']},
+                {chapter: 'Global Events', topics: 'Cold War, Decolonization, Modern conflicts', resources: ['Video Tutorial', 'PDF Notes', 'Analysis']},
+            ],
+            11: [
+                {chapter: 'Contemporary History', topics: 'Post-WWII world, Technology, Globalization', resources: ['Video Tutorial', 'PDF Notes', 'Case Studies']},
+                {chapter: 'Indian Politics', topics: 'Political parties, Elections, Governance', resources: ['Video Tutorial', 'PDF Notes', 'Reports']},
+                {chapter: 'Cultural History', topics: 'Art, Literature, Philosophy, Society', resources: ['Video Tutorial', 'PDF Notes', 'Exhibitions']},
+            ],
+            12: [
+                {chapter: 'World Politics', topics: 'International relations, UN, Treaties, Alliances', resources: ['Video Tutorial', 'PDF Notes', 'Analysis']},
+                {chapter: 'Social Movements', topics: 'Civil rights, Feminism, Labor movements', resources: ['Video Tutorial', 'PDF Notes', 'Documents']},
+                {chapter: 'Future Studies', topics: 'Trends, Challenges, Opportunities', resources: ['Video Tutorial', 'PDF Notes', 'Predictions']},
+            ]
+        }
+    },
+    geography: {
+        title: '🌍 Geography',
+        classes: {
+            9: [
+                {chapter: 'Earth Structure', topics: 'Crust, Mantle, Core, Plate tectonics', resources: ['Video Tutorial', 'PDF Notes', '3D Models']},
+                {chapter: 'Atmosphere', topics: 'Layers, Weather, Climate, Air pressure', resources: ['Video Tutorial', 'PDF Notes', 'Diagrams']},
+                {chapter: 'Water Resources', topics: 'Oceans, Rivers, Groundwater, Pollution', resources: ['Video Tutorial', 'PDF Notes', 'Maps']},
+            ],
+            10: [
+                {chapter: 'Natural Disasters', topics: 'Earthquakes, Volcanoes, Tsunamis, Floods', resources: ['Video Tutorial', 'PDF Notes', 'Videos']},
+                {chapter: 'Ecosystems', topics: 'Biomes, Food chains, Conservation', resources: ['Video Tutorial', 'PDF Notes', 'Infographics']},
+                {chapter: 'Human Geography', topics: 'Population, Migration, Settlements', resources: ['Video Tutorial', 'PDF Notes', 'Statistics']},
+            ],
+            11: [
+                {chapter: 'Regional Geography', topics: 'Asia, Europe, Africa, Americas, Oceania', resources: ['Video Tutorial', 'PDF Notes', 'Regional Maps']},
+                {chapter: 'Economic Geography', topics: 'Trade, Industries, Development, Resources', resources: ['Video Tutorial', 'PDF Notes', 'Case Studies']},
+                {chapter: 'Urban Geography', topics: 'Cities, Infrastructure, Planning, Issues', resources: ['Video Tutorial', 'PDF Notes', 'Urban Plans']},
+            ],
+            12: [
+                {chapter: 'Political Geography', topics: 'Geopolitics, Borders, Sovereignty, Conflicts', resources: ['Video Tutorial', 'PDF Notes', 'Analysis']},
+                {chapter: 'Environmental Issues', topics: 'Climate change, Pollution, Conservation', resources: ['Video Tutorial', 'PDF Notes', 'Reports']},
+                {chapter: 'Geomatics', topics: 'GIS, Maps, Remote sensing, Cartography', resources: ['Video Tutorial', 'PDF Notes', 'Software']},
+            ]
+        }
+    },
+    civics: {
+        title: '⚖️ Civics',
+        classes: {
+            9: [
+                {chapter: 'Constitution', topics: 'Preamble, Fundamental rights, Duties', resources: ['Video Tutorial', 'PDF Notes', 'Documents']},
+                {chapter: 'Democratic Government', topics: 'Legislature, Executive, Judiciary', resources: ['Video Tutorial', 'PDF Notes', 'Structure']},
+                {chapter: 'Citizens & Rights', topics: 'Citizenship, Equality, Freedom, Justice', resources: ['Video Tutorial', 'PDF Notes', 'Laws']},
+            ],
+            10: [
+                {chapter: 'Indian Government', topics: 'Parliament, President, Prime Minister, States', resources: ['Video Tutorial', 'PDF Notes', 'Organization']},
+                {chapter: 'Election System', topics: 'Voting, Representation, Electoral process', resources: ['Video Tutorial', 'PDF Notes', 'Statistics']},
+                {chapter: 'Justice System', topics: 'Courts, Laws, Rights, Legal procedures', resources: ['Video Tutorial', 'PDF Notes', 'Cases']},
+            ],
+            11: [
+                {chapter: 'Political Theory', topics: 'Political ideologies, Governance models, Power', resources: ['Video Tutorial', 'PDF Notes', 'Theories']},
+                {chapter: 'Social Issues', topics: 'Gender, Caste, Religion, Poverty, Healthcare', resources: ['Video Tutorial', 'PDF Notes', 'Reports']},
+                {chapter: 'Development', topics: 'Sustainable development, Education, Employment', resources: ['Video Tutorial', 'PDF Notes', 'SDGs']},
+            ],
+            12: [
+                {chapter: 'International Relations', topics: 'UN, Treaties, Diplomacy, Global issues', resources: ['Video Tutorial', 'PDF Notes', 'Documents']},
+                {chapter: 'Constitutional Law', topics: 'Amendments, Rights, Powers, Limitations', resources: ['Video Tutorial', 'PDF Notes', 'Legal Text']},
+                {chapter: 'Governance & Ethics', topics: 'Administration, Corruption, Transparency', resources: ['Video Tutorial', 'PDF Notes', 'Policies']},
+            ]
+        }
+    }
+};
+
+let selectedSubject = '';
+let selectedClass = '';
+
+function showSubject(subject) {
+    selectedSubject = subject;
+    const subjectInfo = subjectData[subject];
+    document.getElementById('subjectTitle').textContent = subjectInfo.title;
+    document.getElementById('classSelection').style.display = 'block';
+    document.getElementById('contentArea').style.display = 'none';
+}
+
+function showContent(classNum) {
+    selectedClass = classNum;
+    const chapters = subjectData[selectedSubject].classes[classNum];
+    let html = `<h2>${subjectData[selectedSubject].title} - Class ${classNum}</h2>`;
+    
+    chapters.forEach((item, index) => {
+        html += `
+            <div class="resource-card" style="margin-top: 20px;">
+                <h3>Chapter ${index + 1}: ${item.chapter}</h3>
+                <p><strong>Topics:</strong> ${item.topics}</p>
+                <p><strong>Available Resources:</strong></p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    ${item.resources.map(resource => `
+                        <button style="padding: 10px 15px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                            📥 ${resource}
+                        </button>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    document.getElementById('contentArea').innerHTML = html;
+    document.getElementById('contentArea').style.display = 'block';
+}
+</script>
+<!-- Science Class 9 - All Chapters -->
+<div class="resource-card">
+    <h3>🔬 Science Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 1: Matter in Our Surroundings</h4>
+        <p><strong>Topics:</strong> States of matter, Properties of matter, Changes of state, Evaporation</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/X6j_94QAEdI" title="Matter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 2: Is Matter Around Us Pure</h4>
+        <p><strong>Topics:</strong> Pure substances, Mixtures, Separation techniques, Physical and chemical changes</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/LQ1pNNbvySI" title="Pure Substances" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 3: Atoms and Molecules</h4>
+        <p><strong>Topics:</strong> Atomic structure, Molecules, Chemical formulas, Molar mass</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ven6S4cqJO4" title="Atoms and Molecules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 4: Structure of the Atom</h4>
+        <p><strong>Topics:</strong> Electron, Proton, Neutron, Bohr model, Electron configuration, Isotopes</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/TyB0ltKPiL8" title="Atomic Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 5: The Fundamental Unit of Life</h4>
+        <p><strong>Topics:</strong> Cell structure, Organelles, Plant vs animal cells, Unicellular organisms</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/URYJRJ6CyY8" title="Cell Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 6: Tissues</h4>
+        <p><strong>Topics:</strong> Animal tissues, Plant tissues, Epithelial, Connective, Muscle tissues</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/OWLZakGrB80" title="Tissues" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 7: Diversity in Living Organisms</h4>
+        <p><strong>Topics:</strong> Classification, Kingdom, Phylum, Biodiversity, Taxonomy</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/8pQKF_d5ZJg" title="Classification" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 8: Motion</h4>
+        <p><strong>Topics:</strong> Distance, Displacement, Speed, Velocity, Acceleration, Graphs</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/mdJKjfIH90I" title="Motion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 9: Force and Laws of Motion</h4>
+        <p><strong>Topics:</strong> Newton's laws, Force, Friction, Momentum, Impulse</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/R0h7mlDxnp0" title="Force" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 10: Gravitation</h4>
+        <p><strong>Topics:</strong> Gravity, Weight, Gravitational force, Buoyancy, Relative density</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/wPc5AlmGRgc" title="Gravitation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 11: Work and Energy</h4>
+        <p><strong>Topics:</strong> Work, Power, Energy, Kinetic energy, Potential energy, Conservation</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/pEb0w3p_5Ng" title="Work and Energy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 12: Sound</h4>
+        <p><strong>Topics:</strong> Sound waves, Frequency, Wavelength, Speed, Loudness, Pitch, Echo</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9kW6KI0kNbY" title="Sound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 13: Why Do We Fall Ill</h4>
+        <p><strong>Topics:</strong> Diseases, Immunity, Infections, Prevention, Health</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/K6lrXnHjB-o" title="Health and Diseases" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 14: Natural Resources</h4>
+        <p><strong>Topics:</strong> Air, Water, Soil, Minerals, Conservation, Pollution</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/wD7HfJNJ6BE" title="Natural Resources" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 15: Improvement in Food Resources</h4>
+        <p><strong>Topics:</strong> Agriculture, Crop production, Animal husbandry, Fisheries</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Mc33J4SY_C8" title="Food Resources" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+</div>
+
+<!-- English Class 9 - All Chapters -->
+<div class="resource-card">
+    <h3>📖 English Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 1: The Fun They Had</h4>
+        <p><strong>Topics:</strong> Science fiction, Future education, Technology, Character analysis</p>
+        <p>A story about two children in the future discovering old books and learning about traditional schools</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 2: The Road Not Taken</h4>
+        <p><strong>Topics:</strong> Poetry, Nature, Life choices, Symbolism, Metaphor</p>
+        <p>A famous poem by Robert Frost about choosing between two paths in a yellow wood</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 3: Punctuation</h4>
+        <p><strong>Topics:</strong> Punctuation marks, Usage rules, Commas, Semicolons, Apostrophes</p>
+        <p>Grammar lesson on proper use of punctuation in writing</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 4: A Truly Beautiful Mind</h4>
+        <p><strong>Topics:</strong> Biography, Dr. Abdul Kalam, Inspiration, Achievements, Values</p>
+        <p>Biographical account of a scientist and his contributions to India</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 5: The Lost Child</h4>
+        <p><strong>Topics:</strong> Short story, Childhood, Desires, Emotions, Narrative technique</p>
+        <p>Story of a lost child's journey through a fair</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 6: Noun</h4>
+        <p><strong>Topics:</strong> Parts of speech, Noun types, Common and proper nouns, Noun usage</p>
+        <p>Grammar lesson on nouns and their classification</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 7: The Adventures of Toto</h4>
+        <p><strong>Topics:</strong> Story, Animals, Adventures, Humor, Narrative</p>
+        <p>Humorous story about a mischievous monkey</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 8: Poem - Fog</h4>
+        <p><strong>Topics:</strong> Poetry, Nature imagery, Metaphor, Carl Sandburg</p>
+        <p>Short poem describing the arrival of fog</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 9: Verb</h4>
+        <p><strong>Topics:</strong> Parts of speech, Action verbs, Linking verbs, Verb tenses</p>
+        <p>Grammar lesson on verbs and their forms</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 10: Beehive - The Little Girl Had a Curl</h4>
+        <p><strong>Topics:</strong> Nursery rhyme, Rhythm, Rhyme scheme, Childhood</p>
+        <p>Classic nursery rhyme with analysis</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 11: Adjective</h4>
+        <p><strong>Topics:</strong> Parts of speech, Descriptive adjectives, Adjective placement, Comparison</p>
+        <p>Grammar lesson on adjectives and their usage</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 12: Reading Comprehension</h4>
+        <p><strong>Topics:</strong> Passage analysis, Question answering, Inference, Vocabulary in context</p>
+        <p>Practice passages and comprehension questions</p>
+    </div>
+</div>
+
+<!-- History Class 9 - All Chapters -->
+<div class="resource-card">
+    <h3>🏛️ History Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 1: The French Revolution</h4>
+        <p><strong>Topics:</strong> Causes, Events, Outcomes, Impact on world, Liberty and democracy</p>
+        <p>Revolutionary movements and social transformation in France</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 2: Socialism in Europe and the Russian Revolution</h4>
+        <p><strong>Topics:</strong> Industrial Revolution, Socialist ideas, Bolshevik revolution, USSR formation</p>
+        <p>Communist ideology and Soviet establishment</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 3: Nazism and the Rise of Hitler</h4>
+        <p><strong>Topics:</strong> Fascism, Hitler's rise, Nazi ideology, WWII causes</p>
+        <p>Totalitarianism and consequences of extremism</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 4: Forest Society and Colonialism</h4>
+        <p><strong>Topics:</strong> Indian forests, British colonial policies, tribal communities, deforestation</p>
+        <p>Environmental and social impact of colonialism</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 5: Pastoralists in the Modern World</h4>
+        <p><strong>Topics:</strong> Pastoral communities, Grazing lands, Colonial policies, Modern challenges</p>
+        <p>Life of herding communities through history</p>
+    </div>
+</div>
+
+<!-- Geography Class 9 - All Chapters -->
+<div class="resource-card">
+    <h3>🌍 Geography Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 1: India - Size and Location</h4>
+        <p><strong>Topics:</strong> Geographic extent, Position, Latitudinal and longitudinal extent, Political boundaries</p>
+        <p>Physical extent and borders of India</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 2: Physical Features of India</h4>
+        <p><strong>Topics:</strong> Mountains, Plains, Plateaus, Drainage system, Coastal features</p>
+        <p>Terrain and topography of India</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 3: Drainage</h4>
+        <p><strong>Topics:</strong> Rivers, Watersheds, River systems, Drainage patterns, Himalayan and Peninsular rivers</p>
+        <p>Water flow systems and river networks</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 4: Climate</h4>
+        <p><strong>Topics:</strong> Weather, Climate factors, Monsoons, Climate zones, Seasonal variations</p>
+        <p>Weather patterns and climate classification</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 5: Natural Vegetation and Wildlife</h4>
+        <p><strong>Topics:</strong> Forests, Grasslands, Desert vegetation, Wildlife distribution, Conservation</p>
+        <p>Flora and fauna of India</p>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 6: Population</h4>
+        <p><strong>Topics:</strong> Population distribution, Density, Growth, Migration, Demographics</p>
+        <p>Human population characteristics in India</p>
+    </div>
+</div>
+
+<!-- Civics Class 9 - All Chapters -->
+<div class="resource-card">
+    <h3>⚖️ Civics Class 9 - Complete Chapters</h3>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 1: What is Democracy?</h4>
+        <p><strong>Topics:</strong> Definition, Features, Importance, Advantages, Challenges</p>
+        <p>Understanding democratic systems and governance</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_link_1" title="What is Democracy?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 2: Constitutional Design</h4>
+        <p><strong>Topics:</strong> Constitution making, Drafting committee, Principles, Structure, Preamble</p>
+        <p>Evolution of Indian Constitution</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_link_2" title="Constitutional Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 3: Electoral Politics</h4>
+        <p><strong>Topics:</strong> Elections, Voting, Universal adult suffrage, Electoral process, Democracy</p>
+        <p>Election systems and democratic participation</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_link_3" title="Electoral Politics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 4: Working of Institutions</h4>
+        <p><strong>Topics:</strong> Parliament, Executive, President, Prime Minister, Cabinet</p>
+        <p>Government institutions and their functions</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_link_4" title="Working of Institutions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>Chapter 5: Democratic Rights</h4>
+        <p><strong>Topics:</strong> Rights, Duties, Justice system, Equality, Freedom</p>
+        <p>Rights and responsibilities of citizens</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/your_video_link_5" title="Democratic Rights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px; border-radius: 8px;"></iframe>
+    </div>
+</div>
+<div class="ai-assistant">
+    <h3>🤖 AI Assistant</h3>
+    <p>How can I assist you today? You can ask questions about the subjects or request additional resources.</p>
+    <input type="text" id="userQuery" placeholder="Type your question here..." />
+    <button onclick="getAIResponse()">Ask</button>
+    <div id="aiResponse" style="margin-top: 10px;"></div>
+</div>
+
+<script>
+    function getAIResponse() {
+        const query = document.getElementById('userQuery').value;
+        // Simulate AI response (replace with actual AI logic)
+        const response = `You asked: "${query}". This is a placeholder response.`;
+        document.getElementById('aiResponse').textContent = response;
+    }
+</script>
+<!-- AI Integration -->
+<div class="ai-integration">
+    <h3>🤖 AI Assistant</h3>
+    <p>How can I assist you today? You can ask questions about the subjects or request additional resources.</p>
+    <input type="text" id="userQuery" placeholder="Type your question here..." />
+    <button onclick="getAIResponse()">Ask</button>
+    <div id="aiResponse" style="margin-top: 10px;"></div>
+</div>
+
+<script>
+    function getAIResponse() {
+        const query = document.getElementById('userQuery').value;
+        // Simulate AI response (replace with actual AI logic)
+        const response = `You asked: "${query}". This is a placeholder response.`;
+        document.getElementById('aiResponse').textContent = response;
+    }
+</script>
+<style>
+    .ai-integration {
+        display: none;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        animation: slideUp 0.6s ease-out;
+    }
+    
+    .ai-integration.active {
+        display: block;
+    }
+    
+    .ai-integration h3::before {
+        content: '🤖 ';
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+</style>
+
+<script>
+    function toggleAIChat() {
+        const aiIntegration = document.querySelector('.ai-integration');
+        aiIntegration.classList.toggle('active');
+    }
+</script>
+<script>
+// AI Symbol Toggle and Initialization
+document.addEventListener('DOMContentLoaded', function() {
+    const aiButton = document.querySelector('.floating-btn.ai');
+    const aiIntegration = document.querySelector('.ai-integration');
+    
+    aiButton.addEventListener('click', function() {
+        aiIntegration.classList.toggle('active');
+        aiButton.textContent = aiIntegration.classList.contains('active') ? '✨' : '🤖';
+    });
+});
+
+function getAIResponse() {
+    const query = document.getElementById('userQuery').value;
+    const responses = [
+        "That's a great question! Let me help you understand this concept better.",
+        "Based on your query, here are some key points to remember.",
+        "I'm analyzing your question. Here's what you should know.",
+        "Excellent inquiry! This topic is important for your studies."
+    ];
+    
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+    document.getElementById('aiResponse').innerHTML = `<div style="background: white; color: #2c3e50; padding: 15px; border-radius: 8px; margin-top: 10px;">${randomResponse}<br><strong>Your question:</strong> ${query}</div>`;
+    document.getElementById('userQuery').value = '';
+}
+</script>
+<!-- Doubt Section -->
+<div class="doubt-section">
+    <h3>❓ Post Your Doubts</h3>
+    <p>Get help from experts and peers for your learning queries</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+        <div class="doubt-card">
+            <div class="doubt-icon">📝</div>
+            <h4>Post a Question</h4>
+            <p>Ask your doubts and get answers from experts</p>
+            <button onclick="openDoubtForm('question')" class="doubt-btn">Post Now</button>
+        </div>
+        <div class="doubt-card">
+            <div class="doubt-icon">💬</div>
+            <h4>Discussion Forum</h4>
+            <p>Join discussions with peers on topics</p>
+            <button onclick="openDoubtForm('discussion')" class="doubt-btn">Join Now</button>
+        </div>
+        <div class="doubt-card">
+            <div class="doubt-icon">🎯</div>
+            <h4>Live Doubt Session</h4>
+            <p>Get real-time help from tutors</p>
+            <button onclick="openDoubtForm('live')" class="doubt-btn">Schedule</button>
+        </div>
+        <div class="doubt-card">
+            <div class="doubt-icon">📚</div>
+            <h4>FAQ Library</h4>
+            <p>Browse common questions and answers</p>
+            <button onclick="openDoubtForm('faq')" class="doubt-btn">Browse</button>
+        </div>
+    </div>
+</div>
+
+<style>
+.doubt-section {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    animation: slideUp 0.6s ease-out;
+}
+
+.doubt-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.doubt-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.doubt-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: bounce 0.8s ease-out infinite;
+}
+
+.doubt-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.doubt-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+</style>
+
+<script>
+function openDoubtForm(type) {
+    alert(`Opening ${type} doubt section...`);
+}
+</script>
+<!-- Complete Study Material Repository -->
+<div class="resource-card">
+    <h3>📚 Complete Study Material Repository</h3>
+    
+    <!-- Class 10 Mathematics -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>📐 Mathematics Class 10 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Chapter 1:</strong> Real Numbers - Euclid's division, HCF, LCM, Fundamental theorem</div>
+            <div><strong>Chapter 2:</strong> Polynomials - Zeros, Coefficients, Division algorithm</div>
+            <div><strong>Chapter 3:</strong> Linear Equations - Graphical & algebraic solutions</div>
+            <div><strong>Chapter 4:</strong> Quadratic Equations - Solutions, Discriminant, Nature of roots</div>
+            <div><strong>Chapter 5:</strong> Arithmetic Progressions - nth term, Sum of n terms</div>
+            <div><strong>Chapter 6:</strong> Triangles - Similarity, Congruence, Properties</div>
+            <div><strong>Chapter 7:</strong> Coordinate Geometry - Distance, Section, Area formulas</div>
+            <div><strong>Chapter 8:</strong> Introduction to Trigonometry - Ratios, Identities, Applications</div>
+            <div><strong>Chapter 9:</strong> Some Applications of Trigonometry - Heights, Distances</div>
+            <div><strong>Chapter 10:</strong> Circles - Tangent, Chord, Angles in circles</div>
+            <div><strong>Chapter 11:</strong> Constructions - Geometric constructions using compass</div>
+            <div><strong>Chapter 12:</strong> Areas Related to Circles - Area, Perimeter, Sectors</div>
+            <div><strong>Chapter 13:</strong> Surface Areas and Volumes - 3D shapes calculations</div>
+            <div><strong>Chapter 14:</strong> Statistics - Mean, Median, Mode, Frequency distribution</div>
+            <div><strong>Chapter 15:</strong> Probability - Experimental & theoretical probability</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Mathematics Class 10 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 10 Science -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>🔬 Science Class 10 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Chapter 1:</strong> Chemical Reactions - Types, Balancing, Redox reactions</div>
+            <div><strong>Chapter 2:</strong> Acids, Bases & Salts - pH, Neutralization, Properties</div>
+            <div><strong>Chapter 3:</strong> Metals & Non-metals - Reactivity, Extraction, Uses</div>
+            <div><strong>Chapter 4:</strong> Carbon Compounds - Hydrocarbons, Functional groups</div>
+            <div><strong>Chapter 5:</strong> Periodic Classification - Elements, Trends, Properties</div>
+            <div><strong>Chapter 6:</strong> Life Processes - Nutrition, Respiration, Digestion</div>
+            <div><strong>Chapter 7:</strong> Control & Coordination - Nervous, Endocrine systems</div>
+            <div><strong>Chapter 8:</strong> Heredity - Genes, DNA, Inheritance, Variation</div>
+            <div><strong>Chapter 9:</strong> Organisms & Populations - Ecology, Biodiversity</div>
+            <div><strong>Chapter 10:</strong> Light - Reflection, Refraction, Lenses, Eyes</div>
+            <div><strong>Chapter 11:</strong> Electricity - Current, Resistance, Power, Circuits</div>
+            <div><strong>Chapter 12:</strong> Magnetism - Magnetic field, Electromagnetic induction</div>
+            <div><strong>Chapter 13:</strong> Radioactivity - Nuclear reactions, Half-life, Applications</div>
+            <div><strong>Chapter 14:</strong> Energy - Sources, Conservation, Fossil fuels, Renewables</div>
+            <div><strong>Chapter 15:</strong> Our Environment - Pollution, Conservation, Sustainability</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Science Class 10 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 11 Physics -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>⚛️ Physics Class 11 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Physical World - Measurements, Errors, Dimensions</div>
+            <div><strong>Unit 2:</strong> Motion in Straight Line - Kinematics, Graphs, Equations</div>
+            <div><strong>Unit 3:</strong> Motion in Plane - Projectile, Circular motion</div>
+            <div><strong>Unit 4:</strong> Laws of Motion - Newton's laws, Friction, Tension</div>
+            <div><strong>Unit 5:</strong> Work, Energy, Power - Kinetic, Potential, Conservation</div>
+            <div><strong>Unit 6:</strong> System of Particles - COM, Collisions, Momentum</div>
+            <div><strong>Unit 7:</strong> Rotational Motion - Torque, Angular momentum, Inertia</div>
+            <div><strong>Unit 8:</strong> Gravitation - Newton's law, Planetary motion, Satellites</div>
+            <div><strong>Unit 9:</strong> Mechanical Properties of Solids - Stress, Strain, Elasticity</div>
+            <div><strong>Unit 10:</strong> Mechanical Properties of Fluids - Viscosity, Surface tension, Buoyancy</div>
+            <div><strong>Unit 11:</strong> Thermal Properties - Heat, Thermodynamics, Laws</div>
+            <div><strong>Unit 12:</strong> Thermodynamics - Internal energy, Work, Heat transfer</div>
+            <div><strong>Unit 13:</strong> Kinetic Theory - Gases, Pressure, Temperature</div>
+            <div><strong>Unit 14:</strong> Oscillations - SHM, Energy, Damping</div>
+            <div><strong>Unit 15:</strong> Waves - Sound, Light, Wave equation</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Physics Class 11 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 11 Chemistry -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>🧪 Chemistry Class 11 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Some Basic Concepts - Atoms, Molecules, Moles</div>
+            <div><strong>Unit 2:</strong> Structure of Atom - Quantum numbers, Orbitals, Aufbau principle</div>
+            <div><strong>Unit 3:</strong> Classification of Elements - Periodic table, Trends, Properties</div>
+            <div><strong>Unit 4:</strong> Chemical Bonding - Ionic, Covalent, Metallic bonding</div>
+            <div><strong>Unit 5:</strong> States of Matter - Solid, Liquid, Gas, Phase transitions</div>
+            <div><strong>Unit 6:</strong> Thermodynamics - First law, Enthalpy, Entropy</div>
+            <div><strong>Unit 7:</strong> Equilibrium - Law of equilibrium, Kp, Kc, Le Chatelier</div>
+            <div><strong>Unit 8:</strong> Redox Reactions - Oxidation states, Balancing, Electrode potential</div>
+            <div><strong>Unit 9:</strong> Hydrogen - Properties, Isotopes, Compounds, Industrial uses</div>
+            <div><strong>Unit 10:</strong> s-block Elements - Alkali, Alkaline earth metals, Properties</div>
+            <div><strong>Unit 11:</strong> p-block Elements - Groups, Properties, Compounds</div>
+            <div><strong>Unit 12:</strong> Organic Chemistry - Hydrocarbons, Nomenclature, Isomerism</div>
+            <div><strong>Unit 13:</strong> Hydrocarbons - Alkanes, Alkenes, Alkynes, Reactions</div>
+            <div><strong>Unit 14:</strong> Environmental Chemistry - Pollution, Depletion, Conservation</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Chemistry Class 11 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 11 Biology -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>🧬 Biology Class 11 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Diversity of Living Organisms - Classification, Taxonomy</div>
+            <div><strong>Unit 2:</strong> Structural Organization - Cell types, Tissues, Organs</div>
+            <div><strong>Unit 3:</strong> Cell Structure & Function - Organelles, Membranes, Nucleus</div>
+            <div><strong>Unit 4:</strong> Cell Division - Mitosis, Meiosis, Binary fission</div>
+            <div><strong>Unit 5:</strong> Plant Anatomy - Root, Stem, Leaf tissues and structures</div>
+            <div><strong>Unit 6:</strong> Animal Tissues - Epithelial, Connective, Muscle, Nervous</div>
+            <div><strong>Unit 7:</strong> Plant Physiology - Photosynthesis, Respiration, Transport</div>
+            <div><strong>Unit 8:</strong> Human Physiology - Digestion, Circulation, Respiration</div>
+            <div><strong>Unit 9:</strong> Nervous System - Brain, Spinal cord, Nerves, Reflex</div>
+            <div><strong>Unit 10:</strong> Endocrine System - Hormones, Glands, Regulation</div>
+            <div><strong>Unit 11:</strong> Locomotion & Movement - Skeletal, Muscular systems</div>
+            <div><strong>Unit 12:</strong> Excretion - Kidney, Urinary system, Homeostasis</div>
+            <div><strong>Unit 13:</strong> Reproduction - Asexual, Sexual reproduction in plants</div>
+            <div><strong>Unit 14:</strong> Genetics - Mendel's laws, Inheritance, Mutation</div>
+            <div><strong>Unit 15:</strong> Evolution - Natural selection, Adaptation, Evidence</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Biology Class 11 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 12 Physics -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>⚛️ Physics Class 12 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Electrostatics - Electric field, Potential, Gauss's law</div>
+            <div><strong>Unit 2:</strong> Current Electricity - EMF, Current, Resistance, Kirchhoff's laws</div>
+            <div><strong>Unit 3:</strong> Magnetic Effects - Lorentz force, Ampere's law, Magnetic field</div>
+            <div><strong>Unit 4:</strong> Electromagnetic Induction - Faraday's law, Lenz's law, Transformers</div>
+            <div><strong>Unit 5:</strong> AC Circuits - Impedance, Resonance, Power factor</div>
+            <div><strong>Unit 6:</strong> Electromagnetic Waves - Maxwell's equations, Spectrum, Propagation</div>
+            <div><strong>Unit 7:</strong> Optics - Ray optics, Wave optics, Interference, Diffraction</div>
+            <div><strong>Unit 8:</strong> Photon & Dual Nature - Photoelectric effect, Compton effect</div>
+            <div><strong>Unit 9:</strong> Atomic Structure - Bohr model, X-rays, Spectrum</div>
+            <div><strong>Unit 10:</strong> Nuclei - Mass-energy, Radioactivity, Nuclear reactions</div>
+            <div><strong>Unit 11:</strong> Semiconductors - Diodes, Transistors, Logic gates</div>
+            <div><strong>Unit 12:</strong> Communication Systems - Modulation, Transmission, Reception</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Physics Class 12 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 12 Chemistry -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>🧪 Chemistry Class 12 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Solutions - Concentration, Colligative properties</div>
+            <div><strong>Unit 2:</strong> Electrochemistry - Cells, Electrode potential, Corrosion</div>
+            <div><strong>Unit 3:</strong> Chemical Kinetics - Rate, Order, Activation energy</div>
+            <div><strong>Unit 4:</strong> Surface Chemistry - Adsorption, Catalysis, Colloids</div>
+            <div><strong>Unit 5:</strong> General Principles - Extraction of metals, Metallurgy</div>
+            <div><strong>Unit 6:</strong> p-block Elements - Groups 13-18, Properties, Compounds</div>
+            <div><strong>Unit 7:</strong> d & f Block Elements - Transition metals, Lanthanides, Actinides</div>
+            <div><strong>Unit 8:</strong> Coordination Compounds - Ligands, Isomerism, Bonding</div>
+            <div><strong>Unit 9:</strong> Organic Compounds - Halides, Alcohols, Aldehydes, Ketones</div>
+            <div><strong>Unit 10:</strong> Carboxylic Acids - Esters, Derivatives, Reactions</div>
+            <div><strong>Unit 11:</strong> Nitrogen Compounds - Amines, Amides, Diazo compounds</div>
+            <div><strong>Unit 12:</strong> Biomolecules - Carbohydrates, Proteins, Lipids, Nucleic acids</div>
+            <div><strong>Unit 13:</strong> Polymers - Natural, Synthetic, Polymerization reactions</div>
+            <div><strong>Unit 14:</strong> Chemistry in Daily Life - Medicines, Pesticides, Detergents</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Chemistry Class 12 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Class 12 Biology -->
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <h4>🧬 Biology Class 12 - All Chapters</h4>
+        <div style="display: grid; gap: 10px;">
+            <div><strong>Unit 1:</strong> Reproduction - Sexual reproduction in plants & animals</div>
+            <div><strong>Unit 2:</strong> Sexual Reproduction - Gametogenesis, Fertilization, Embryogenesis</div>
+            <div><strong>Unit 3:</strong> Human Reproduction - Reproductive organs, Menstrual cycle, Pregnancy</div>
+            <div><strong>Unit 4:</strong> Reproductive Health - Contraception, STDs, Infertility</div>
+            <div><strong>Unit 5:</strong> Principles of Inheritance - Mendelian genetics, Chromosome theory</div>
+            <div><strong>Unit 6:</strong> Molecular Basis of Inheritance - DNA, RNA, Protein synthesis</div>
+            <div><strong>Unit 7:</strong> Expression of Genes - Regulation, Mutations, Genetic disorders</div>
+            <div><strong>Unit 8:</strong> Evolution - Darwin, Natural selection, Speciation, Human evolution</div>
+            <div><strong>Unit 9:</strong> Human Health - Diseases, Immunity, Vaccines, Drugs</div>
+            <div><strong>Unit 10:</strong> Organism & Population - Ecology, Population growth, Community</div>
+            <div><strong>Unit 11:</strong> Ecosystem - Energy flow, Biogeochemical cycles, Biomes</div>
+            <div><strong>Unit 12:</strong> Biodiversity & Conservation - Species, Habitat loss, Protected areas</div>
+            <div><strong>Unit 13:</strong> Environmental Issues - Pollution, Global warming, Sustainable development</div>
+            <div><strong>Unit 14:</strong> Biotechnology - rDNA, PCR, Cloning, GMO, Applications</div>
+        </div>
+        <button class="subject-btn" onclick="alert('Biology Class 12 materials loading...')" style="margin-top: 15px;">📥 Download All Materials</button>
+    </div>
+
+    <!-- Quick Download Section -->
+    <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; text-align: center; color: white;">
+        <h3>⚡ Quick Downloads</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">📋 All Notes (PDF)</button>
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">📹 Video Tutorials</button>
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">✏️ Practice Papers</button>
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">🎯 Previous Year Papers</button>
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">📊 Solutions</button>
+            <button class="subject-btn" style="background: white; color: #667eea; font-weight: bold;">📚 Complete Syllabus</button>
+        </div>
+    </div>
+</div>
+<!-- Active Quick Download System -->
+<div class="active-quick-download">
+    <h3>🚀 Active Quick Downloads</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+        <button class="subject-btn" onclick="alert('All Notes (PDF) downloading...')" style="background: #28a745; color: white; font-weight: bold;">📋 All Notes (PDF)</button>
+        <button class="subject-btn" onclick="alert('Video Tutorials loading...')" style="background: #28a745; color: white; font-weight: bold;">📹 Video Tutorials</button>
+        <button class="subject-btn" onclick="alert('Practice Papers downloading...')" style="background: #28a745; color: white; font-weight: bold;">✏️ Practice Papers</button>
+        <button class="subject-btn" onclick="alert('Previous Year Papers loading...')" style="background: #28a745; color: white; font-weight: bold;">🎯 Previous Year Papers</button>
+        <button class="subject-btn" onclick="alert('Solutions downloading...')" style="background: #28a745; color: white; font-weight: bold;">📊 Solutions</button>
+        <button class="subject-btn" onclick="alert('Complete Syllabus loading...')" style="background: #28a745; color: white; font-weight: bold;">📚 Complete Syllabus</button>
+    </div>
+</div>
+<div class="container">
+  <h1>Study Materials</h1>
+
+  <div class="card-container">
+
+    <!-- Class 9 -->
+    <div class="card">
+      <h2>Class 9 - Mathematics</h2>
+      <p>Algebra, Geometry, Number System</p>
+      <a href="https://www.youtube.com/results?search_query=class+9+maths+full+course" target="_blank" class="btn">Watch on YouTube</a>
+    </div>
+
+    <div class="card">
+      <h2>Class 9 - Science</h2>
+      <p>Physics, Chemistry, Biology basics</p>
+      <a href="https://www.youtube.com/results?search_query=class+9+science+full+course" target="_blank" class="btn">Watch on YouTube</a>
+    </div>
+
+    <!-- Class 12 -->
+    <div class="card">
+      <h2>Class 12 - Physics</h2>
+      <p>Electrostatics, Current, Optics</p>
+      <a href="https://www.youtube.com/results?search_query=class+12+physics+full+course" target="_blank" class="btn">Watch on YouTube</a>
+    </div>
+
+    <div class="card">
+      <h2>Class 12 - Chemistry</h2>
+      <p>Organic, Inorganic, Physical Chemistry</p>
+      <a href="https://www.youtube.com/results?search_query=class+12+chemistry+full+course" target="_blank" class="btn">Watch on YouTube</a>
+    </div>
+
+    <div class="card">
+      <h2>Class 12 - Mathematics</h2>
+      <p>Calculus, Algebra, Vectors</p>
+      <a href="https://www.youtube.com/results?search_query=class+12+maths+full+course" target="_blank" class="btn">Watch on YouTube</a>
+    </div>
+
+  </div>
+</div>
+<section class="motivation">
+  <h2>Stay Motivated 🚀</h2>
+  <p>
+    Success doesn't come from what you do occasionally, it comes from what you do consistently.
+    Every small step you take today builds your future. You may feel tired, distracted, or even
+    discouraged—but remember, every topper you admire once felt the same.
+  </p>
+
+  <p>
+    Don't compare your chapter 1 to someone else's chapter 20. Focus on your journey.
+    Study not just to pass exams, but to build knowledge, confidence, and a better life.
+  </p>
+
+  <p>
+    Wake up with determination, go to bed with satisfaction. Keep pushing yourself because
+    no one else is going to do it for you. Your dreams are waiting—start working for them today.
+  </p>
+
+  <button onclick="showMessage()">I Will Study Now 💪</button>
+</section>
+<script>
+function showMessage() {
+  alert("🔥 That's the spirit! Stay focused and keep studying!");
+}
+</script>
+<script>
+function changeTheme(theme) {
+  document.body.className = theme;
+  localStorage.setItem("theme", theme);
+}
+
+/* Load saved theme */
+window.onload = function() {
+  let savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.className = savedTheme;
+  }
+};
+</script>
+<div style="text-align:center; margin:20px;">
+  <h2>Study Timer ⏳</h2>
+  <button onclick="startTimer()">Start 25 Min</button>
+</div>
+
+<script>
+function startTimer() {
+  alert("⏳ Study session started for 25 minutes!");
+}
+</script>
+<div class="motivation">
+  <h2 id="quote">Stay focused!</h2>
+</div>
+
+<script>
+const quotes = [
+  "Push yourself, no one else will do it for you.",
+  "Success starts with self-discipline.",
+  "Small steps every day = Big success.",
+  "Don't stop until you're proud."
+];
+
+setInterval(() => {
+  let random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerText = quotes[random];
+}, 3000);
+</script>
+<audio id="clickSound" src="https://www.soundjay.com/buttons/button-3.mp3"></audio>
+
+<script>
+document.addEventListener("click", () => {
+  document.getElementById("clickSound").play();
+});
+</script>
